@@ -9,3 +9,6 @@
 - Для сборки пакета: make build
 - Для отладки публикации: make publish
 - Для установки пакета: make package-install
+
+## Демо
+[![asciicast](https://asciinema.org/a/awF3sXyPXHj6gT2B1ne2wQAye.png)](https://asciinema.org/a/awF3sXyPXHj6gT2B1ne2wQAye)
