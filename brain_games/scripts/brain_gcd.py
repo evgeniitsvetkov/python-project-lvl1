@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import math
 import prompt
 import random
 
@@ -15,21 +16,21 @@ def random_int(start=1, end=100):
 
 
 def get_question():
-    number_to_guess = random_int()
-    return number_to_guess
+    a = random_int()
+    b = random_int()
+    question = f'{a} {b}'
+    return question
 
 
 def get_answer(question):
-    if question % 2 == 0:
-        return 'yes'
-    else:
-        return 'no'
+    a, b = [int(x) for x in question.split()]
+    return str(math.gcd(a, b))
 
 
 def main():
     name = welcome_user()
 
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('Find the greatest common divisor of given numbers.')
 
     guesses_in_a_row = 3
 
