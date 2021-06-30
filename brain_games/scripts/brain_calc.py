@@ -10,8 +10,8 @@ def welcome_user():
     return name
 
 
-def random_int():
-    return random.randint(1, 100)
+def random_int(start=1, end=100):
+    return random.randint(start, end)
 
 
 def get_question():
@@ -25,7 +25,7 @@ def get_question():
 
 def get_answer(question):
     answer = eval(question)
-    return answer
+    return str(answer)
 
 
 def main():
@@ -40,15 +40,15 @@ def main():
         print(f'Question: {question}')
 
         user_input = prompt.string('Your answer: ')
-        answers = str(get_answer(question))
-        if user_input == answers:
+        answer = get_answer(question)
+        if user_input == answer:
             print('Correct!')
             guesses_in_a_row -= 1
             if guesses_in_a_row == 0:
                 print(f'Congratulations, {name}!')
         else:
             print(f"'{user_input}' is wrong answer ;(. "
-                  f"Correct answer was '{answers}'.\n"
+                  f"Correct answer was '{answer}'.\n"
                   f"Let's try again, {name}!")
             break
 

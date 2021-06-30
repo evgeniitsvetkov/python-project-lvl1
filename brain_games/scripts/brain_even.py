@@ -10,6 +10,23 @@ def welcome_user():
     return name
 
 
+def random_int(start=1, end=100):
+    return random.randint(start, end)
+
+
+def get_question():
+	number_to_guess = random_int()
+	return number_to_guess
+
+
+def get_answer(question, user_input):
+    answers = ['yes', 'no']
+    if user_input not in answers or question % 2 == 1:
+        return 'no'
+    else:
+        return 'yes'
+
+
 def main():
     name = welcome_user()
 
@@ -18,20 +35,19 @@ def main():
     guesses_in_a_row = 3
 
     while guesses_in_a_row > 0:
-        random_int = random.randint(1, 100)
-        print(f'Question: {random_int}')
+        question = get_question()
+        print(f'Question: {question}')
 
         user_input = prompt.string('Your answer: ')
-        answers = ['yes', 'no']
-        modulo = {'yes': 0, 'no': 1}
-        if user_input in answers and random_int % 2 == modulo[user_input]:
+        answer = get_answer(question, user_input)
+        if user_input == answer:
             print('Correct!')
             guesses_in_a_row -= 1
             if guesses_in_a_row == 0:
                 print(f'Congratulations, {name}!')
         else:
             print(f"'{user_input}' is wrong answer ;(. "
-                  f"Correct answer was '{answers[random_int % 2]}'.\n"
+                  f"Correct answer was '{answer}'.\n"
                   f"Let's try again, {name}!")
             break
 
