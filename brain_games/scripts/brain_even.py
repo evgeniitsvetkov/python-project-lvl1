@@ -15,8 +15,8 @@ def random_int(start=1, end=100):
 
 
 def get_question():
-	number_to_guess = random_int()
-	return number_to_guess
+    number_to_guess = random_int()
+    return number_to_guess
 
 
 def get_answer(question, user_input):
