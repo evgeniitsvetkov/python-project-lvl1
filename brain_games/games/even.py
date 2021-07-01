@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import random
+
 import brain_games.games.flow as flow
 
 
@@ -6,7 +8,9 @@ task = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_question():
-    number_to_guess = flow.random_int()
+    min_num = 1
+    max_num = 100
+    number_to_guess = random.randint(min_num, max_num)
     return number_to_guess
 
 
