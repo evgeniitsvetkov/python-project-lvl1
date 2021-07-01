@@ -21,11 +21,13 @@ def get_prime_numbers(max_number=500):
 
     # check only odd numbers
     for number in range(3, max_number + 1, 2):
+        is_prime = True
         # check divisibility up to square of the number
         for i in range(2, int(sqrt(number)) + 1):
             if number % i == 0:
-                break
-        prime_numbers.append(number)
+                is_prime = False
+        if is_prime:
+            prime_numbers.append(number)
     return prime_numbers
 
 
