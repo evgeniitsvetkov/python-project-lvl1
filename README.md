@@ -5,10 +5,10 @@
 
 - Для установки зависимостей: make install
 - Для проверки стиля: make lint
-- Для запуска: make brain-games
+- Для запуска: make brain-games (brain-even, brain-calc, brain-gcd, brain-progression, brain-prime)
 - Для сборки пакета: make build
 - Для отладки публикации: make publish
 - Для установки пакета: make package-install
 
-## Демо
-[![asciicast](https://asciinema.org/a/awF3sXyPXHj6gT2B1ne2wQAye.png)](https://asciinema.org/a/awF3sXyPXHj6gT2B1ne2wQAye)
+## Демонстрация
+[![asciicast](https://asciinema.org/a/iMkymRTilwuba7wPXaGCXGacb.svg)](https://asciinema.org/a/iMkymRTilwuba7wPXaGCXGacb)
