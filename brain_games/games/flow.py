@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import prompt
 
+GUESS_TO_WIN = 3
+
 
 def welcome_user():
     print('Welcome to the Brain Games!')
@@ -15,7 +17,7 @@ def game_flow(task, get_question, get_answer):
     print(task)
 
     guesses_in_a_row = 0
-    while guesses_in_a_row < 3:
+    while guesses_in_a_row < GUESS_TO_WIN:
         question = get_question()
         print(f'Question: {question}')
 
@@ -24,7 +26,7 @@ def game_flow(task, get_question, get_answer):
         if user_input == answer:
             print('Correct!')
             guesses_in_a_row += 1
-            if guesses_in_a_row == 3:
+            if guesses_in_a_row == GUESS_TO_WIN:
                 print(f'Congratulations, {name}!')
         else:
             print(f"'{user_input}' is wrong answer ;(. "
