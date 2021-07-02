@@ -7,12 +7,8 @@ MIN_NUM = 1
 MAX_NUM = 500
 
 
-task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-
-
-def get_question():
-    number_to_guess = random.randint(MIN_NUM, MAX_NUM)
-    return number_to_guess
+task_description = ('Answer "yes" if given number is prime. '
+                    'Otherwise answer "no".')
 
 
 def get_prime_numbers(max_number=500):
@@ -31,10 +27,8 @@ def get_prime_numbers(max_number=500):
     return prime_numbers
 
 
-def is_prime(number):
+def get_task():
+    number = random.randint(MIN_NUM, MAX_NUM)
     prime_numbers = get_prime_numbers()
-    return number in prime_numbers
-
-
-def get_answer(question):
-    return 'yes' if is_prime(question) else 'no'
+    answer = 'yes' if number in prime_numbers else 'no'
+    return number, answer

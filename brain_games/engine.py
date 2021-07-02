@@ -11,18 +11,17 @@ def welcome_user():
     return name
 
 
-def play_game(task, get_question, get_answer):
+def play_game(task_description, get_task):
     name = welcome_user()
 
-    print(task)
+    print(task_description)
 
     guesses_in_a_row = 0
     while guesses_in_a_row < GUESSES_TO_WIN:
-        question = get_question()
+        question, answer = get_task()
         print(f'Question: {question}')
 
         user_input = prompt.string('Your answer: ')
-        answer = get_answer(question)
         if user_input == answer:
             print('Correct!')
             guesses_in_a_row += 1

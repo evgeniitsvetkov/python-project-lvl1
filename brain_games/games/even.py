@@ -6,16 +6,10 @@ MIN_NUM = 1
 MAX_NUM = 100
 
 
-task = 'Answer "yes" if the number is even, otherwise answer "no".'
+task_description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def get_question():
-    number_to_guess = random.randint(MIN_NUM, MAX_NUM)
-    return number_to_guess
-
-
-def get_answer(number_to_guess):
-    if number_to_guess % 2 == 0:
-        return 'yes'
-    else:
-        return 'no'
+def get_task():
+    number = random.randint(MIN_NUM, MAX_NUM)
+    answer = 'yes' if number % 2 == 0 else 'no'
+    return number, answer
