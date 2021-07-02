@@ -2,16 +2,16 @@
 from math import sqrt
 import random
 
-import brain_games.games.flow as flow
+
+MIN_NUM = 1
+MAX_NUM = 500
 
 
 task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_question():
-    min_number = 1
-    max_number = 500
-    number_to_guess = random.randint(min_number, max_number)
+    number_to_guess = random.randint(MIN_NUM, MAX_NUM)
     return number_to_guess
 
 
@@ -38,7 +38,3 @@ def is_prime(number):
 
 def get_answer(question):
     return 'yes' if is_prime(question) else 'no'
-
-
-def brain_prime():
-    flow.game_flow(task, get_question, get_answer)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import prompt
 
-GUESS_TO_WIN = 3
+GUESSES_TO_WIN = 3
 
 
 def welcome_user():
@@ -11,13 +11,13 @@ def welcome_user():
     return name
 
 
-def game_flow(task, get_question, get_answer):
+def play_game(task, get_question, get_answer):
     name = welcome_user()
 
     print(task)
 
     guesses_in_a_row = 0
-    while guesses_in_a_row < GUESS_TO_WIN:
+    while guesses_in_a_row < GUESSES_TO_WIN:
         question = get_question()
         print(f'Question: {question}')
 
@@ -26,7 +26,7 @@ def game_flow(task, get_question, get_answer):
         if user_input == answer:
             print('Correct!')
             guesses_in_a_row += 1
-            if guesses_in_a_row == GUESS_TO_WIN:
+            if guesses_in_a_row == GUESSES_TO_WIN:
                 print(f'Congratulations, {name}!')
         else:
             print(f"'{user_input}' is wrong answer ;(. "
