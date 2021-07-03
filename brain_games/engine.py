@@ -17,7 +17,7 @@ def play_game(task_description, get_task):
     print(task_description)
 
     guesses_in_a_row = 0
-    while guesses_in_a_row < GUESSES_TO_WIN:
+    while True:
         question, answer = get_task()
         print(f'Question: {question}')
 
@@ -27,6 +27,7 @@ def play_game(task_description, get_task):
             guesses_in_a_row += 1
             if guesses_in_a_row == GUESSES_TO_WIN:
                 print(f'Congratulations, {name}!')
+                break
         else:
             print(f"'{user_input}' is wrong answer ;(. "
                   f"Correct answer was '{answer}'.\n"
