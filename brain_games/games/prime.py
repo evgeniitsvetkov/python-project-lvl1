@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from math import gcd
+from brain_games.games.gcd import gcd
 import random
 
 
