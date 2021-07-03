@@ -14,6 +14,14 @@ def get_task():
     b = random.randint(MIN_NUM, MAX_NUM)
     ops = ['+', '-', '*']
     op = random.choice(ops)
+
     question = f'{a} {op} {b}'
-    answer = str(eval(question))
+
+    if op == '+':
+        answer = str(a + b)
+    elif op == '-':
+        answer = str(a - b)
+    elif op == '*':
+        answer = str(a * b)
+
     return question, answer
