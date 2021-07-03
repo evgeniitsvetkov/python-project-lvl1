@@ -26,10 +26,22 @@ make install
 Run a game
 
 ```bash
-make brain-even (brain-calc, brain-gcd, brain-progression, brain-prime)
+make brain-even
+```
+```bash
+make brain-calc
+```
+```bash
+make brain-gcd
+```
+```bash
+make brain-progression
+```
+```bash
+make brain-prime
 ```
 
-Make a python package
+Make Brain Games python package
 
 ```bash
 make build
@@ -44,9 +56,20 @@ make package-install
 Run a game from your OS
 
 ```bash
-brain-even (brain-calc, brain-gcd, brain-progression, brain-prime)
+brain-even
 ```
-
+```bash
+brain-calc
+```
+```bash
+brain-gcd
+```
+```bash
+brain-progression
+```
+```bash
+brain-prime
+```
 
 ## Contribution
 
