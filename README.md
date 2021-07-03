@@ -4,7 +4,7 @@
 [![Python package](https://github.com/evgeniitsvetkov/python-project-lvl1/actions/workflows/python-package.yml/badge.svg)](https://github.com/evgeniitsvetkov/python-project-lvl1/actions/workflows/python-package.yml)
 
 
-## Five games to make your brain work
+## Five CLI games to make your brain work
 
 1. Brain Even. Find odd or even number
 2. Brain Calc. Are you good at calculus?
