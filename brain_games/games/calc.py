@@ -4,24 +4,23 @@ import random
 
 MIN_NUM = 1
 MAX_NUM = 100
-
-
-task_description = 'What is the result of the expression?'
+OPS = ['+', '-', '*']
+TASK_DESCRIPTION = 'What is the result of the expression?'
 
 
 def get_task():
     a = random.randint(MIN_NUM, MAX_NUM)
     b = random.randint(MIN_NUM, MAX_NUM)
-    ops = ['+', '-', '*']
-    op = random.choice(ops)
+    op = random.choice(OPS)
 
     question = f'{a} {op} {b}'
 
     if op == '+':
-        answer = str(a + b)
+        answer = a + b
     elif op == '-':
-        answer = str(a - b)
+        answer = a - b
     elif op == '*':
-        answer = str(a * b)
+        answer = a * b
+    answer = str(answer)
 
     return question, answer

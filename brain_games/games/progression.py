@@ -9,9 +9,7 @@ STEP_MAX = 9
 LENGTH_MIN = 5
 LENGTH_MAX = 10
 INDEX_MIN = 0
-
-
-task_description = 'What number is missing in the progression?'
+TASK_DESCRIPTION = 'What number is missing in the progression?'
 
 
 def get_task():

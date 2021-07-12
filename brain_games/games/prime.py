@@ -5,9 +5,7 @@ import random
 
 MIN_NUM = -100
 MAX_NUM = 500
-
-
-task_description = ('Answer "yes" if given number is prime. '
+TASK_DESCRIPTION = ('Answer "yes" if given number is prime. '
                     'Otherwise answer "no".')
 
 

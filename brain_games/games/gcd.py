@@ -4,9 +4,7 @@ import random
 
 MIN_NUM = 1
 MAX_NUM = 100
-
-
-task_description = 'Find the greatest common divisor of given numbers.'
+TASK_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def gcd(a, b):

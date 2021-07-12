@@ -4,9 +4,7 @@ import random
 
 MIN_NUM = 1
 MAX_NUM = 100
-
-
-task_description = 'Answer "yes" if the number is even, otherwise answer "no".'
+TASK_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_task():
