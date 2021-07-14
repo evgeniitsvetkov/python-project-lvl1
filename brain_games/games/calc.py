@@ -4,23 +4,23 @@ import random
 
 MIN_NUM = 1
 MAX_NUM = 100
-OPS = ['+', '-', '*']
+OPERATOR_SIGNS = ['+', '-', '*']
 TASK_DESCRIPTION = 'What is the result of the expression?'
 
 
 def get_task():
-    a = random.randint(MIN_NUM, MAX_NUM)
-    b = random.randint(MIN_NUM, MAX_NUM)
-    op = random.choice(OPS)
+    num_a = random.randint(MIN_NUM, MAX_NUM)
+    num_b = random.randint(MIN_NUM, MAX_NUM)
+    operator_sign = random.choice(OPERATOR_SIGNS)
 
-    question = f'{a} {op} {b}'
+    question = f'{num_a} {operator_sign} {num_b}'
 
-    if op == '+':
-        answer = a + b
-    elif op == '-':
-        answer = a - b
-    elif op == '*':
-        answer = a * b
+    if operator_sign == '+':
+        answer = num_a + num_b
+    elif operator_sign == '-':
+        answer = num_a - num_b
+    elif operator_sign == '*':
+        answer = num_a * num_b
     answer = str(answer)
 
     return question, answer

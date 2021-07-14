@@ -19,8 +19,8 @@ def get_task():
     end = start + (step * length)
     progression = [str(x) for x in range(start, end, step)]
 
-    index = random.randint(INDEX_MIN, length - 1)
-    answer = progression[index]
-    progression[index] = '..'
-    progression_to_guess = ' '.join(progression)
-    return progression_to_guess, answer
+    number_to_guess_index = random.randint(INDEX_MIN, length - 1)
+    answer = progression[number_to_guess_index]
+    progression[number_to_guess_index] = '..'
+    question = ' '.join(progression)
+    return question, answer

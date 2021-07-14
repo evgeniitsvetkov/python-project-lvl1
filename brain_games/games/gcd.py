@@ -7,19 +7,19 @@ MAX_NUM = 100
 TASK_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def gcd(a, b):
+def gcd(num_a, num_b):
     # Euclidean algorithm
-    while a != 0 and b != 0:
-        if a > b:
-            a = a % b
+    while num_a != 0 and num_b != 0:
+        if num_a > num_b:
+            num_a = num_a % num_b
         else:
-            b = b % a
-    return a + b
+            num_b = num_b % num_a
+    return num_a + num_b
 
 
 def get_task():
-    a = random.randint(MIN_NUM, MAX_NUM)
-    b = random.randint(MIN_NUM, MAX_NUM)
-    question = f'{a} {b}'
-    answer = str(gcd(a, b))
+    num_a = random.randint(MIN_NUM, MAX_NUM)
+    num_b = random.randint(MIN_NUM, MAX_NUM)
+    question = f'{num_a} {num_b}'
+    answer = str(gcd(num_a, num_b))
     return question, answer
