@@ -4,14 +4,15 @@ import prompt
 GUESSES_TO_WIN = 3
 
 
-def play_game(task_description, get_task):
+def play(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!\n{task_description}')
+    print(f'Hello, {name}!')
+    print(f'{game.TASK_DESCRIPTION}')
 
     tries = GUESSES_TO_WIN
     while tries:
-        question, task_answer = get_task()
+        question, task_answer = game.get_task()
         print(f'Question: {question}')
 
         user_answer = prompt.string('Your answer: ')

@@ -3,8 +3,7 @@ import brain_games as bg
 
 
 def main():
-    bg.engine.play_game(bg.games.even.TASK_DESCRIPTION,
-                        bg.games.even.get_task)
+    bg.engine.play(bg.games.even)
 
 
 if __name__ == '__main__':

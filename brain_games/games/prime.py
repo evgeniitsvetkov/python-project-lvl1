@@ -10,14 +10,14 @@ TASK_DESCRIPTION = ('Answer "yes" if given number is prime. '
 
 
 def is_prime(number):
-    if number > 1:
-        # check divisibility up to square of the number
-        for divider in range(2, int(sqrt(number)) + 1):
-            if number % divider == 0:
-                return False
-        return True
-    else:
+    if number <= 1:
         return False
+
+    # check divisibility up to square of the number
+    for divider in range(2, int(sqrt(number)) + 1):
+        if number % divider == 0:
+            return False
+    return True
 
 
 def get_task():
